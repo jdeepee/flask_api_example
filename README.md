@@ -7,4 +7,4 @@ Here is a sample API using SQLAlchemy, Marshamllow and Flask Restful. Split into
 	*Marshmallow: http://marshmallow.readthedocs.io/en/latest/
 
 # About me:
-	18yr old python developer. Co-Founder of [this](http://yourloop.co) app. Student at [Holberton School](https://www.holbertonschool.com/). Follow me on Twitter [here](https://twitter.com/JDeePee).
+18yr old python developer. Co-Founder of [this](http://yourloop.co) app. Student at [Holberton School](https://www.holbertonschool.com/). Follow me on Twitter [here](https://twitter.com/JDeePee).
