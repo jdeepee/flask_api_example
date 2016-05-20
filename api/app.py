@@ -1,3 +1,4 @@
+from flask import Flask
 from flask_restful import Resource, Api 
 
 application = Flask(__name__) #Creating application
@@ -15,8 +16,11 @@ session = Session()
 session._model_changes = {}
 
 from rest.routes import index
+from rest.routes import post
+from rest.routes import users
 
 ## Mapping our resource classes to routes
+
 #Index
 api.add_resource(index, '/')
 

@@ -28,3 +28,37 @@ def auth_token_required(f): #Wrapping function to check and decode JWT token
 
 		return f(*args, **kwargs)
 	return decorated_function
+
+
+def json_included_authtoken(f):
+	@wraps(f)
+	def decorated_function(*args, **kwargs):
+		data = request.get_json()
+		if data:
+			try:
+				data['username']
+				data['password']
+
+				if len(username) > 20:
+					response = json_message("Username is too long")
+					return Response(response=response, status=400, mimetype='application/json')
+
+				return f(*args, **kwargs)
+			except KeyError:
+				response = json_message("You are missing some JSON fields")
+				return Response(response=response, status=400, mimetype='application/json')
+
+		else:
+			response = json_message("You are missing JSON")
+			return Response(response=response, status=400, mimetype='application/json')
+
+		return f(*args, **kwargs)
+	return decorated_function
+
+def json_included_user(f):
+	@wraps(f)
+	def decorated_function(*args, **kwargs):
+		return f(*args, **kwargs)
+
+	return decorated_function
+

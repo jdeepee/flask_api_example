@@ -13,6 +13,12 @@ class UserGet(Resource):
 
 class AuthToken(Resource):
 	#All HTTP post request to '/authtoken/' are handled by this function.
+	method_decorators = [json_included_authtoken]
+
 	def post(self):
-		pass
+		data = request.get_json()
+		username = data['username']
+		password = data['password']
+
+		service = User.Authtoken(username, password)
 
