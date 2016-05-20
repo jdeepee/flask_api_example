@@ -4,3 +4,6 @@ class UserRepository():
 	def signup():
 		pass
 
+class PostRepository():
+	def post():
+		pass

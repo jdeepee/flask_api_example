@@ -1,4 +1,5 @@
 from flask_restful import Resource
+from ..functions.function import json_message
 
 ## Rest Controller Layer should only handle HTTP responses/requests and JSON serilization/deserilization.
 

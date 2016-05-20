@@ -11,7 +11,6 @@ class UserGet(Resource):
 	def get(self, id):
 		pass
 
-
 class AuthToken(Resource):
 	#All HTTP post request to '/authtoken/' are handled by this function.
 	def post(self):
