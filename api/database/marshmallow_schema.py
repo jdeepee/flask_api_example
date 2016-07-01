@@ -9,7 +9,7 @@ class UsersSchema(Schema):
 	formatted_name = fields.Method("format_name", dump_only=True)
 
 	def format_name(self, users):
-		return "{}, {}".format(author.first_name, author.last_name)
+		return "{}, {}".format(UsersSchema.first_name, UsersSchema.last_name)
 
 	@pre_load
     def process_author(self, data):
@@ -30,6 +30,3 @@ class PostSchema(Schema):
 def must_not_be_blank(data):
     if not data:
         raise ValidationError('Data not provided.')
-
-userschema = UsersSchema()
-postschema = PostSchema()

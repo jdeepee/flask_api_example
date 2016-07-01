@@ -15,6 +15,7 @@ Session.configure(bind=engine)
 session = Session()
 session._model_changes = {}
 
+#Importing our classes
 from rest.routes import index
 from rest.routes import post
 from rest.routes import users
