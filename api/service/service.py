@@ -1,4 +1,5 @@
 from ..repository.repository import *
+from ..rest.functions.functions import *
 from passlib.hash import bcrypt
 
 ## Service layer does most of the logic for your API and offloads any database transaction to the repository layer.
